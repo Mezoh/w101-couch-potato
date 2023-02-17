@@ -66,16 +66,10 @@ def CheckMana():
             auto.click(button)
             sleep(0.2)
             auto.click(button)
-
-
-
-
+            
 def main():
 
     while True:
-        
-
-
         window = auto.locateOnScreen("img/window.png", confidence=0.7, grayscale=True)
         if (window == False):
             break
@@ -88,11 +82,6 @@ def main():
                 Wander()
                 CheckForBattle()
                 
-
-                
-
-        
-
 main()
 
 
