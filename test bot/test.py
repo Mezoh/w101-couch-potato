@@ -1,3 +1,4 @@
+from itertools import repeat
 import pyautogui as auto
 from time import sleep
 import keyboard
@@ -43,13 +44,20 @@ def SelectEnchant():
 
 def CastSpell():
     enchanted = auto.locateOnScreen("img/enchanted.png", confidence= 0.7, grayscale=True)
-
+    passss = auto.locateOnScreen("img/passss.png", confidence= 0.7, grayscale=True)
+    repeat (2)
     if (enchanted):
         button = auto.center(enchanted)
         auto.click(button)
         sleep(0.2)
         auto.click(button)
         print("casting")
+    else:
+        passss
+        button = auto.center(passss)
+        auto.click(button)
+        sleep(0.2)
+        auto.click(button)
 
 def Wander():
     with auto.hold("D"):
